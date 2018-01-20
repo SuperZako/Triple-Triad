@@ -1,0 +1,119 @@
+@font-face {
+	font-family: "Open Sans Light";
+	src: url('fonts/opensans-light-webfont.eot');
+	src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/opensans-light-webfont.woff') format('woff'),
+	     url('fonts/opensans-light-webfont.ttf') format('truetype'),
+	     url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+}
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: #000000;
+	font-family: Open Sans Light;
+	font-size: 100%;
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+body:after {
+	/* preload images */
+	content: url("img/board-mat.jpg") url("img/icon-pause.png") url("img/icon-sound-off.png");
+	display: none;
+}
+canvas {
+	padding-left: 0;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+img {
+	position: fixed;
+	right: 1%;
+	height: 6%;
+	opacity: 0.5;
+	transition: opacity .2s ease-in-out;
+	-moz-transition: opacity .2s ease-in-out;
+	-webkit-transition: opacity .2s ease-in-out;
+	cursor: crosshair;
+}
+img:hover {
+	opacity: 1;
+}
+#pause {
+	top: 1%;
+	left: 1%;
+}
+#info {
+	top: 1%;
+}
+#rules {
+	top: 8%;
+}
+#auto {
+	bottom: 15%;
+}
+#restart {
+	bottom: 8%;
+}
+#sound {
+	bottom: 1%;
+}
+
+/* Author: http://stackoverflow.com/questions/7577308/ */
+.popup {
+	position: fixed;
+	top: -2000px;
+	width: auto;
+	opacity: 0;
+	background: #eee;
+	padding: 10px;
+	text-align: right;
+	-webkit-transition-property: opacity, right, top;
+	-webkit-transition-duration: 0.5s, 0.5s, 0s;
+	-webkit-transition-delay: 0s, 0s, 0.5s;
+	-ms-transition-property: opacity, right, top;
+	-ms-transition-duration: 0.5s, 0.5s, 0s;
+	-ms-transition-delay: 0s, 0s, 0.5s;
+	-moz-transition-property: opacity, right, top;
+	-moz-transition-duration: 0.5s, 0.5s, 0s;
+	-moz-transition-delay: 0s, 0s, 0.5s;
+	transition-property: opacity, right, top;
+	transition-duration: 0.5s, 0.5s, 0s;
+	transition-delay: 0s, 0s, 0.5s;
+}
+.popup:empty {
+	padding: 0px;
+}
+#rules_popup {
+	right: 0;
+	cursor: pointer;
+}
+#pause_popup {
+	left: 1%;
+	cursor: default;
+	font-weight: bold;
+}
+#rules:hover + #rules_popup,
+#rules_popup:hover {
+	top: 15%;
+	right: 1%;
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	-ms-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.pause_text {
+	top: 8%;
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	-ms-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+}
